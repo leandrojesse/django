@@ -2,13 +2,15 @@
 
 {% block content %}
   <main>
+    <body style="background-color:#080808;">
+    
     <div class="container">
 
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
 
         <!-- Navbar brand -->
-        <span class="navbar-brand">Categories:</span>
+        <span class="navbar-brand">Categorias:</span>
 
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -22,18 +24,24 @@
           <!-- Links -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">All
+              <a class="nav-link" href="#">Tudo
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Shirts</a>
+              <a class="nav-link" href="#">Pranchas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sport wears</a>
+              <a class="nav-link" href="#">Skate</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Outwears</a>
+              <a class="nav-link" href="#">Bikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Patins</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Patinetes</a>
             </li>
 
           </ul>
@@ -75,17 +83,17 @@
                 <h5>
                   <strong>
                     <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
-                      <span class="badge badge-pill {{ item.get_label_display }}-color">NEW</span>
+                      <span class="badge badge-pill {{ item.get_label_display }}-color">Novo</span>
                     </a>
                   </strong>
                 </h5>
 
                 <h4 class="font-weight-bold blue-text">
-                  <strong>$
+                  <strong> R$
                   {% if item.discount_price %}
-                  {{ item.discount_price }}
+                  {{ item.discount_price }}0 /Hora
                   {% else %}
-                  {{ item.price }}
+                  {{ item.price }}0 /Hora
                   {% endif %}
                   </strong>
                 </h4>

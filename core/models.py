@@ -7,9 +7,12 @@ from django_countries.fields import CountryField
 
 
 CATEGORY_CHOICES = (
-    ('S', 'Shirt'),
-    ('SW', 'Sport wear'),
-    ('OW', 'Outwear')
+    ('S', 'Surf'),
+    ('SW', 'Skate'),
+    ('B', 'Bike'),
+    ('L', 'Longboard'),
+    ('P', 'Patinete'),
+    ('PT', 'Patins') 
 )
 
 LABEL_CHOICES = (
@@ -131,6 +134,9 @@ class Order(models.Model):
             total -= self.coupon.amount
         return total
 
+    class Meta:
+        verbose_name_plural = 'Pedidos'
+
 
 class Address(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
@@ -146,7 +152,7 @@ class Address(models.Model):
         return self.user.username
 
     class Meta:
-        verbose_name_plural = 'Addresses'
+        verbose_name_plural = 'Endereços'
 
 
 class Payment(models.Model):
@@ -158,6 +164,8 @@ class Payment(models.Model):
 
     def __str__(self):
         return self.user.username
+    class Meta:
+        verbose_name_plural = 'Pagamentos'
 
 
 class Coupon(models.Model):
@@ -166,6 +174,8 @@ class Coupon(models.Model):
 
     def __str__(self):
         return self.code
+    class Meta:
+        verbose_name_plural = 'Cupons'
 
 
 class Refund(models.Model):
@@ -176,6 +186,9 @@ class Refund(models.Model):
 
     def __str__(self):
         return f"{self.pk}"
+    
+    class Meta:
+        verbose_name_plural = 'Reembolsos'
 
 
 def userprofile_receiver(sender, instance, created, *args, **kwargs):

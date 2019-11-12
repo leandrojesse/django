@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+  <!--body style="background-color:#080808;"-->
   <main class="mt-5 pt-4">
     <div class="container dark-grey-text mt-5">
 
@@ -11,7 +11,7 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4">
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid" alt="">
+          <img src="{{ item.image.url }}" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
@@ -31,15 +31,15 @@
             <p class="lead">
               {% if object.discount_price %}
               <span class="mr-1">
-                <del>${{ object.price }}</del>
+                <del>R${{ object.price }}0</del>
               </span>
-              <span>${{ object.discount_price }}</span>
+              <span>R${{ object.discount_price }}0</span>
               {% else %}
-              <span>${{ object.price }}</span>
+              <span>R${{ object.price }}0</span>
               {% endif %}
             </p>
 
-            <p class="lead font-weight-bold">Description</p>
+            <p class="lead font-weight-bold">Descrição</p>
 
             <p>{{ object.description }}</p>
 
@@ -47,17 +47,17 @@
               <!-- Default input -->
               <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
               <button class="btn btn-primary btn-md my-0 p" type="submit">
-                Add to cart
+                Adicionar ao carrinho
                 <i class="fas fa-shopping-cart ml-1"></i>
               </button>
 
             </form> {% endcomment %}
             <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p">
-              Add to cart
+              Adicionar ao carrinho
               <i class="fas fa-shopping-cart ml-1"></i>
             </a>
             <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p">
-              Remove from cart
+              Remover do carrinho
             </a>
 
           </div>
@@ -77,11 +77,12 @@
         <!--Grid column-->
         <div class="col-md-6 text-center">
 
-          <h4 class="my-4 h4">Additional information</h4>
+          <h4 class="my-4 h4">Sobre a Enjoy Life</h4>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit
-            voluptates,
-            quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
+          <p>Com muito orgulho e satisfação anunciamos que a empresa Enjoy Life, esta em parceria com empresas locais, diretamente ligadas à sustentabilidade do meio-ambiente.
+            Não que seja um beneficio somente para a empresa, mas também para o meio-ambiente e para a sociedade como um todo.
+            É exatamente para minimizar o impacto no meio ambiente que a empresa trabalha com dois objetivos principais: minimizar o dispêndio de eletricidade dos nossos produtos e investir em tecnologias que possam satisfazer as gerações atuais, sem comprometer as futuras, é cada vez mais fácil que cada organização cumpra o seu papel de impactar positivamente na sociedade, seja reduzindo a utilização de energia elétrica, a poluição nos processos de produção ou realizando ações sociais.
+            Além de prezar pela preservação do meio ambiente incentivamos nossos funcionários a fazerem o mesmo, com a qualidade de vida dos colaboradores, consumidores e dos recursos naturais utilizados.</p>
 
         </div>
         <!--Grid column-->
@@ -93,27 +94,27 @@
       <div class="row wow fadeIn">
 
         <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
+        <!--div class="col-lg-4 col-md-12 mb-4"-->
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
+          <!--img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
 
-        </div>
+        </div-->
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <!--div class="col-lg-4 col-md-6 mb-4">
 
           <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
 
-        </div>
+        </diz-->
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <!--div class="col-lg-4 col-md-6 mb-4">
 
           <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
 
-        </div>
+        </div-->
         <!--Grid column-->
 
       </div>
